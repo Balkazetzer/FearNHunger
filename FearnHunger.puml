@@ -1,0 +1,132 @@
+@startuml
+
+class Mapa
+ class Mazmorra
+ class Musica 
+
+Mapa <|-- Mazmorra
+Mapa *-- Musica
+Mapa *-- Elemento
+Mapa *-- Enemigo
+
+Personaje *-- Mapa
+
+class Elemento
+ class Cofre 
+ class Estanteria
+ class Caja
+ class Cama
+
+Elemento <|--- Cofre
+Elemento <|-- Estanteria
+Elemento <|-- Caja
+Elemento <|-- Cama
+
+PersonajeJugable o-- Elemento
+Elemento *-- Item
+
+class Item
+ class Equipamiento
+ class Libro 
+ class Comida 
+ class Arma 
+ class Amuleto
+ class Pocion
+ class Planta
+ class MonedaDorada
+
+Suerte o-- MonedaDorada 
+
+PersonajeJugable *-- Item
+PersonajeJugable o-- Item
+PersonajeNoJugable o-- Item
+
+Item <|-- Equipamiento
+Item <|-- Libro
+Item <|-- Comida 
+Item <|-- Arma 
+Item <|-- Amuleto 
+Item <|-- Pocion 
+Item <|-- Planta 
+
+Pocion *-- Item
+
+class Enemigo
+class Guardia
+class Maneba 
+class Ghoul
+
+Enemigo <|-- Guardia
+Enemigo <|-- Maneba
+Enemigo <|-- Ghoul
+
+class Ataque
+
+Ataque o-- Suerte
+Cama o-- Suerte
+Estanteria o-- Suerte 
+Habilidad o-- Suerte
+
+class Suerte 
+
+class Personaje 
+ class PersonajeJugable
+  class Cahara 
+  class DArce 
+  class Ragnvaldr
+  class Enki
+ class PersonajeNoJugable
+  class Girl 
+  class LEgarde
+  class Nashrah
+  class Moonless
+
+ class PersonajeReclutable
+
+ PersonajeReclutable --|> PersonajeNoJugable
+ PersonajeReclutable o-- Item
+ PersonajeReclutable *-- Estadistica
+
+ Girl --|> PersonajeReclutable
+ Moonless --|>PersonajeReclutable
+ Nashrah --|>PersonajeReclutable
+ LEgarde --|> PersonajeNoJugable
+
+PersonajeJugable <|-- Enki
+PersonajeJugable <|-- DArce
+PersonajeJugable <|-- Ragnvaldr
+PersonajeJugable <|-- Cahara
+
+Personaje *-- Estadistica
+Personaje *-- Fobia 
+Personaje *-- Mision
+Personaje *-- Habilidad
+Personaje o-- Suerte
+
+Estadistica <|-- Salud
+Estadistica <|-- Sanidad
+Estadistica <|-- Hambre
+
+ class Estadistica
+  class Salud 
+  class Sanidad 
+  class Hambre 
+  class Fobia
+  class Habilidad
+   class Devorar
+   class Robar 
+   class Hablar 
+
+   Habilidad <|-- Devorar
+   Habilidad <|-- Robar 
+   Habilidad <|-- Hablar 
+
+  class Mision
+   class MatarALEgarde
+   class RescatarALegarde
+
+Mision <|-- RescatarALegarde
+Mision <|-- MatarALEgarde
+
+
+@enduml
