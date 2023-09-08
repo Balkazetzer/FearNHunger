@@ -12,10 +12,14 @@ class MatarALEgarde : public Mision
 {
 public:
     MatarALEgarde() {}
+        virtual ~MatarALEgarde() {}
+
 };
 
 class RescatarALegarde : public Mision
 {
 public:
     RescatarALegarde() {}
+        virtual ~RescatarALegarde() {}
+
 };

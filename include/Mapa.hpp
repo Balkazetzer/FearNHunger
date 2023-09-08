@@ -12,4 +12,5 @@ class Mazmorra : public Mapa
 {
 public:
     Mazmorra() {}
+    virtual ~Mazmorra() {}
 };
