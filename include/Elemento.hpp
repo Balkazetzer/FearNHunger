@@ -1,37 +1,16 @@
-#include <iostream>
-#include <cstdio>
-
 class Elemento
 {
+private:
+    /* data */
 public:
-    Elemento() {}
-    ~Elemento() {}
+    Elemento(/* args */);
+    ~Elemento();
 };
 
-class Cofre : public Elemento
+Elemento::Elemento(/* args */)
 {
-public:
-    Cofre() {}
-    ~Cofre() {}
-};
+}
 
-class Estanteria : public Elemento
+Elemento::~Elemento()
 {
-public:
-    Estanteria() {}
-    ~Estanteria() {}
-};
-
-class Caja : public Elemento
-{
-public:
-    Caja() {}
-    ~Caja() {}
-};
-
-class Cama : public Elemento
-{
-public:
-    Cama() {}
-    ~Cama() {}
-};
+}

@@ -1,9 +1,16 @@
-#include <iostream>
-#include <cstdio>
-
 class Musica
 {
+private:
+  /* data */
 public:
-  Musica() {}
-  ~Musica() {}
+  Musica(/* args */);
+  ~Musica();
 };
+
+Musica::Musica(/* args */)
+{
+}
+
+Musica::~Musica()
+{
+}

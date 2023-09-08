@@ -1,30 +1,16 @@
-#include <iostream>
-#include <cstdio>
-
 class Enemigo
 {
+private:
+    /* data */
 public:
-    Enemigo() {}
-    ~Enemigo() {}
+    Enemigo(/* args */);
+    ~Enemigo();
 };
 
-class Guardia : public Enemigo
+Enemigo::Enemigo(/* args */)
 {
-public:
-    Guardia() {}
-    ~Guardia() {}
-};
+}
 
-class Maneba : public Enemigo
+Enemigo::~Enemigo()
 {
-public:
-    Maneba() {}
-    ~Maneba() {}
-};
-
-class Ghoul : public Enemigo
-{
-public:
-    Ghoul() {}
-    ~Ghoul() {}
-};
+}

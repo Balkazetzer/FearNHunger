@@ -1,58 +1,16 @@
-#include <iostream>
-#include <cstdio>
-
-class Equipamiento
+class Equipamento
 {
+private:
+  /* data */
 public:
-  Equipamiento() {}
-  ~Equipamiento() {}
+  Equipamento(/* args */);
+  ~Equipamento();
 };
 
-class Libro : public Equipamiento
+Equipamento::Equipamento(/* args */)
 {
-public:
-  Libro() {}
-  ~Libro() {}
-};
+}
 
-class Comida : public Equipamiento
+Equipamento::~Equipamento()
 {
-public:
-  Comida() {}
-  ~Comida() {}
-};
-
-class Arma : public Equipamiento
-{
-public:
-  Arma() {}
-  ~Arma() {}
-};
-
-class Amuleto : public Equipamiento
-{
-public:
-  Amuleto() {}
-  ~Amuleto() {}
-};
-
-class Pocion : public Equipamiento
-{
-public:
-  Pocion() {}
-  ~Pocion() {}
-};
-
-class Planta : public Equipamiento
-{
-public:
-  Planta() {}
-  ~Planta() {}
-};
-
-class MonedaDorada : public Equipamiento
-{
-public:
-  MonedaDorada() {}
-  ~MonedaDorada() {}
-};
+}
