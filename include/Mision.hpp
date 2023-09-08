@@ -4,20 +4,20 @@
 class Mision
 {
 public:
-    Mision() {}
-    virtual ~Mision() {}
+  Mision() {}
+  ~Mision() {}
 };
 
 class MatarALEgarde : public Mision
 {
 public:
-    MatarALEgarde() {}
-    virtual ~MatarALEgarde() {}
+  MatarALEgarde() {}
+  ~MatarALEgarde() {}
 };
 
 class RescatarALegarde : public Mision
 {
 public:
-    RescatarALegarde() {}
-    virtual ~RescatarALegarde() {}
+  RescatarALegarde() {}
+  ~RescatarALegarde() {}
 };

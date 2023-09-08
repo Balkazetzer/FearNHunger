@@ -4,76 +4,76 @@
 class Personaje
 {
 public:
-    Personaje() {}
-    virtual ~Personaje() {}
+  Personaje() {}
+  ~Personaje() {}
 };
 
 class PersonajeJugable : public Personaje
 {
 public:
-    PersonajeJugable() {}
-    virtual ~PersonajeJugable() {}
+  PersonajeJugable() {}
+  ~PersonajeJugable() {}
 };
 
 class PersonajeNoJugable : public Personaje
 {
 public:
-    PersonajeNoJugable() {}
-    virtual ~PersonajeNoJugable() {}
+  PersonajeNoJugable() {}
+  ~PersonajeNoJugable() {}
 };
 
 class Cahara : public PersonajeJugable
 {
 public:
-    Cahara() {}
-    virtual ~Cahara() {}
+  Cahara() {}
+  ~Cahara() {}
 };
 
 class DArce : public PersonajeJugable
 {
 public:
-    DArce() {}
-    virtual ~DArce() {}
+  DArce() {}
+  ~DArce() {}
 };
 
 class Ragnvaldr : public PersonajeJugable
 {
 public:
-    Ragnvaldr() {}
-    virtual ~Ragnvaldr() {}
+  Ragnvaldr() {}
+  ~Ragnvaldr() {}
 };
 
 class Enki : public PersonajeJugable
 {
 public:
-    Enki() {}
-    virtual ~Enki() {}
+  Enki() {}
+  ~Enki() {}
 };
 
 class Girl : public PersonajeNoJugable
 {
 public:
-    Girl() {}
-    virtual ~Girl() {}
+  Girl() {}
+  ~Girl() {}
 };
 
 class LEgarde : public PersonajeNoJugable
 {
 public:
-    LEgarde() {}
-    virtual ~LEgarde() {}
+  LEgarde() {}
+  ~LEgarde() {}
 };
 
 class Nashrah : public PersonajeNoJugable
 {
 public:
-    Nashrah() {}
-    virtual ~Nashrah() {}
+  Nashrah() {}
+  ~Nashrah() {}
 };
 
 class Moonless : public PersonajeNoJugable
 {
 public:
-    Moonless() {}
-    virtual ~Moonless() {}
+  Moonless() {}
+  ~Moonless() {}
 };

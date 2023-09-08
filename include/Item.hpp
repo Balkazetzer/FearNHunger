@@ -4,6 +4,6 @@
 class Item
 {
 public:
-    Item() {}
-    virtual ~Item() {}
+  Item() {}
+  ~Item() {}
 };

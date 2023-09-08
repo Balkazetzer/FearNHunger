@@ -5,33 +5,33 @@ class Elemento
 {
 public:
     Elemento() {}
-    virtual ~Elemento() {}
+    ~Elemento() {}
 };
 
 class Cofre : public Elemento
 {
 public:
     Cofre() {}
-    virtual ~Cofre() {}
+    ~Cofre() {}
 };
 
 class Estanteria : public Elemento
 {
 public:
     Estanteria() {}
-    virtual ~Estanteria() {}
+    ~Estanteria() {}
 };
 
 class Caja : public Elemento
 {
 public:
     Caja() {}
-    virtual ~Caja() {}
+    ~Caja() {}
 };
 
 class Cama : public Elemento
 {
 public:
     Cama() {}
-    virtual ~Cama() {}
+    ~Cama() {}
 };

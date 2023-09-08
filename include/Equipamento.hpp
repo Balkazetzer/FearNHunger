@@ -4,55 +4,55 @@
 class Equipamiento
 {
 public:
-    Equipamiento() {}
-    virtual ~Equipamiento() {}
+  Equipamiento() {}
+  ~Equipamiento() {}
 };
 
 class Libro : public Equipamiento
 {
 public:
-    Libro() {}
-    virtual ~Libro() {}
+  Libro() {}
+  ~Libro() {}
 };
 
 class Comida : public Equipamiento
 {
 public:
-    Comida() {}
-    virtual ~Comida() {}
+  Comida() {}
+  ~Comida() {}
 };
 
 class Arma : public Equipamiento
 {
 public:
-    Arma() {}
-    virtual ~Arma() {}
+  Arma() {}
+  ~Arma() {}
 };
 
 class Amuleto : public Equipamiento
 {
 public:
-    Amuleto() {}
-    virtual ~Amuleto() {}
+  Amuleto() {}
+  ~Amuleto() {}
 };
 
 class Pocion : public Equipamiento
 {
 public:
-    Pocion() {}
-    virtual ~Pocion() {}
+  Pocion() {}
+  ~Pocion() {}
 };
 
 class Planta : public Equipamiento
 {
 public:
-    Planta() {}
-    virtual ~Planta() {}
+  Planta() {}
+  ~Planta() {}
 };
 
 class MonedaDorada : public Equipamiento
 {
 public:
-    MonedaDorada() {}
-    virtual ~MonedaDorada() {}
+  MonedaDorada() {}
+  ~MonedaDorada() {}
 };

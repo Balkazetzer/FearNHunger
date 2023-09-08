@@ -1,4 +1,4 @@
-@startuml
+@startuml FearNHunger
 
 class Mapa
  class Mazmorra

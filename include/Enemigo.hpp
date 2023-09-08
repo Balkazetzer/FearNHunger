@@ -5,26 +5,26 @@ class Enemigo
 {
 public:
     Enemigo() {}
-    virtual ~Enemigo() {}
+    ~Enemigo() {}
 };
 
 class Guardia : public Enemigo
 {
 public:
     Guardia() {}
-    virtual ~Guardia() {}
+    ~Guardia() {}
 };
 
 class Maneba : public Enemigo
 {
 public:
     Maneba() {}
-    virtual ~Maneba() {}
+    ~Maneba() {}
 };
 
 class Ghoul : public Enemigo
 {
 public:
     Ghoul() {}
-    virtual ~Ghoul() {}
+    ~Ghoul() {}
 };

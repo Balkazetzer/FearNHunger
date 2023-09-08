@@ -4,6 +4,6 @@
 class Musica
 {
 public:
-    Musica() {}
-    virtual ~Musica() {}
+  Musica() {}
+  ~Musica() {}
 };

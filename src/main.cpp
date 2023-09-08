@@ -1,6 +1,8 @@
 #include <iostream>
 #include <Mascota.hpp>
 
+// UN CPP POR CADA EJECUTABLE
+
 int main(int argc, char const *argv[])
 {
 

@@ -4,13 +4,13 @@
 class Mapa
 {
 public:
-    Mapa() {}
-    virtual ~Mapa() {}
+  Mapa() {}
+  ~Mapa() {}
 };
 
 class Mazmorra : public Mapa
 {
 public:
-    Mazmorra() {}
-    virtual ~Mazmorra() {}
+  Mazmorra() {}
+  ~Mazmorra() {}
 };

@@ -4,34 +4,33 @@
 class Estadistica
 {
 public:
-    Estadistica() {}
-    virtual ~Estadistica() {}
+  Estadistica() {}
+  ~Estadistica() {}
 };
 
 class Salud : public Estadistica
 {
 public:
-    Salud() {}
-    virtual ~Salud() {}
+  Salud() {}
+  ~Salud() {}
 };
 
 class Cordura : public Estadistica
 {
 public:
-    Cordura() {}
-    virtual ~Cordura() {}
+  Cordura() {}
 };
 
 class Hambre : public Estadistica
 {
 public:
-    Hambre() {}
-    virtual ~Hambre() {}
+  Hambre() {}
+  ~Hambre() {}
 };
 
 class Fobia : public Estadistica
 {
 public:
-    Fobia() {}
-    virtual ~Fobia() {}
+  Fobia() {}
+  ~Fobia() {}
 };

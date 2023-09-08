@@ -4,27 +4,27 @@
 class Habilidad
 {
 public:
-    Habilidad() {}
-    virtual ~Habilidad() {}
+  Habilidad() {}
+  ~Habilidad() {}
 };
 
 class Devorar : public Habilidad
 {
 public:
-    Devorar() {}
-    virtual ~Devorar() {}
+  Devorar() {}
+  ~Devorar() {}
 };
 
 class Robar : public Habilidad
 {
 public:
-    Robar() {}
-    virtual ~Robar() {}
+  Robar() {}
+  ~Robar() {}
 };
 
 class Hablar : public Habilidad
 {
 public:
-    Hablar() {}
-    virtual ~Hablar() {}
+  Hablar() {}
+  ~Hablar() {}
 };
