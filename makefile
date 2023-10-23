@@ -3,8 +3,8 @@ CXX = c++ #Linux
 
 br : compilar ejecutar
 
-compilar : src/main.cpp include/*
-	$(CXX) src/main.cpp -o bin/fnh -I include -l curses
+compilar : src/juego.cpp include/*
+	$(CXX) src/juego.cpp -o bin/fnh -I include -l curses
 
 ejecutar : bin/fnh
 	./bin/fnh

@@ -1,17 +1,35 @@
+#pragma once
+
 #include <curses.h>
 #include <unistd.h>
+#include <ncurses.h>
 #include <list>
-
+#include <Actualizable.hpp>
+#include <Dibujo.hpp>
+#include <fstream>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Ventana
 {
 private:
-    /* data */
+
 public:
     Ventana(/* args */);
     ~Ventana();
 
+    bool Comprobar(int cols, int rows)
+    {
+        if (cols >= 30 && rows >= 30)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     void Actualizar(list<Actualizable *> actualizables)
     {
 
@@ -37,10 +55,10 @@ public:
 
 Ventana::Ventana(/* args */)
 {
-    initscr();
+    initscr;
     noecho();
-    curs_set(FALSE);
-    cbreak();
+    curs_set;
+    cbreak;
     keypad(stdscr, true);
     timeout(10);
 }
@@ -48,5 +66,5 @@ Ventana::Ventana(/* args */)
 Ventana::~Ventana()
 {
     keypad(stdscr, false);
-    endwin();
+    endwin;
 }
