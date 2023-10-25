@@ -22,14 +22,14 @@ public:
     }
     Dibujo(int x, int y, std::string recurso)
     {
-        archivo.open("./docs/sprites/charsprites/" + recurso + ".txt");
+        archivo.open("./docs/" + recurso + ".txt");
         this->x = 0;
         this->y = y;
     }
 
     Dibujo(std::string recurso)
     {
-        archivo.open("../docs/sprites/charsprites/" + recurso + ".txt");
+        archivo.open("../docs/" + recurso + ".txt");
         this->x = x;
         this->y = y;
     }

@@ -7,10 +7,10 @@ class Jugador : public Dibujo, public Actualizable
 private:
     /* data */
 public:
-    Jugador() : Dibujo("charf1"){
+    Jugador() : Dibujo("sprites/charsprites/charf1"){
 
     }
-    Jugador(int x, int y) : Dibujo(x, y, "charf1")
+    Jugador(int x, int y) : Dibujo(x, y, "sprites/charsprites/charf1")
     {
         
     }

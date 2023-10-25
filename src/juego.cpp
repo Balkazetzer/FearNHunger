@@ -6,6 +6,7 @@
 #include <list>
 #include <Jugador.hpp>
 #include <Actualizable.hpp>
+#include <PantallaInicio.hpp>
 
 using namespace std;
 
@@ -24,6 +25,7 @@ int main(int argc, char const *argv[])
     {
 
         Jugador *chara = new Jugador(3, 3);
+        PantallaInicio *inicio = new PantallaInicio();
 
         list<Dibujo *> dibujos;
         dibujos.push_back(chara);
@@ -31,10 +33,20 @@ int main(int argc, char const *argv[])
         list<Actualizable *> actualizables;
         actualizables.push_back(chara);
 
-        char key;
+        list<Dibujo *> fondos;
+        fondos.push_back(inicio);
+        char key, st;
 
         do
         {
+
+            do
+            {
+
+                ventana.Dibujar(fondos);
+                st = getch();
+
+            } while (st != 'q' && st != 'Q' && st != 's' && st != 'S');
             ventana.Actualizar(actualizables);
             // PANTALLA DE INICIO
             ventana.Dibujar(dibujos);
@@ -68,8 +80,7 @@ int main(int argc, char const *argv[])
                 break;
             }
 
-        } while (true); 
-
+        } while (true);
     }
     else
     {
