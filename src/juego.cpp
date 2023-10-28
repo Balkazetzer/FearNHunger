@@ -18,6 +18,7 @@ int main(int argc, char const *argv[])
     int rows, cols;
     bool sizescr;
     getmaxyx(stdscr, rows, cols);
+    string dimensiones = "dimensiones de la pantalla " + to_string(rows) +"x, "+ to_string(cols) + "y";
     fstream pinicio;
 
     Ventana ventana;
@@ -45,6 +46,7 @@ int main(int argc, char const *argv[])
             ventana.Dibujar(pantallas);
             refresh();
             mvprintw(15, 5, "PRESIONA S PARA EMPEZAR EL JUEGO O CUALQUIER OTRA TECLA PARA SALIR");
+            mvprintw(30, 5, dimensiones.c_str());
             refresh(); 
             cin >> st;
 
