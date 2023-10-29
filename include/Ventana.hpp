@@ -55,10 +55,10 @@ public:
 
 Ventana::Ventana(/* args */)
 {
-    initscr;
+    initscr();
     noecho();
-    curs_set;
-    cbreak;
+    curs_set(0);
+    cbreak();
     keypad(stdscr, true);
     timeout(10);
 }
@@ -66,5 +66,5 @@ Ventana::Ventana(/* args */)
 Ventana::~Ventana()
 {
     keypad(stdscr, false);
-    endwin;
+    endwin();
 }
