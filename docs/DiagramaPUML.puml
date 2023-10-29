@@ -1,8 +1,13 @@
 @startuml FearNHunger
 
 class Mapa
- class Mazmorra
- class Musica 
+class Mazmorra
+class Musica 
+class Nivel
+class Ventana
+class Dibujo
+class PantallaInicio
+class Actualizable
 
 Mapa <|-- Mazmorra
 Mapa *-- Musica
@@ -11,10 +16,14 @@ Mapa *-- Enemigo
 
 Personaje *-- Mapa
 
+Nivel -- Dibujo
+Mapa --|> Dibujo
+PersonajeJugable -- Dibujo 
+PersonajeJugable -- Actualizable
+
 class Elemento
  class Cofre 
  class Estanteria
- class Caja
  class Cama
 
 Elemento <|--- Cofre
@@ -107,26 +116,19 @@ Estadistica <|-- Salud
 Estadistica <|-- Sanidad
 Estadistica <|-- Hambre
 
- class Estadistica
+class Estadistica
   class Salud 
   class Sanidad 
   class Hambre 
   class Fobia
-  class Habilidad
-   class Devorar
-   class Robar 
-   class Hablar 
+  
+class Habilidad  
+   Habilidad <|-- Devorar  
+   Habilidad <|-- Robar   
+   Habilidad <|-- Hablar   
 
-   Habilidad <|-- Devorar
-   Habilidad <|-- Robar 
-   Habilidad <|-- Hablar 
+  class Mision  
+   Mision <|-- RescatarALegarde  
+   Mision <|-- MatarALEgarde  
 
-  class Mision
-   class MatarALEgarde
-   class RescatarALegarde
-
-Mision <|-- RescatarALegarde
-Mision <|-- MatarALEgarde
-
-
-@enduml
+@enduml  
