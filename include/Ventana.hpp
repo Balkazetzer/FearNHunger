@@ -15,8 +15,9 @@ using namespace std;
 class Ventana
 {
 private:
-
-Nivel* nivel;
+protected:
+Nivel* nivelSeleccionado;
+int maxx, maxy;
 public:
     Ventana(/* args */);
     ~Ventana();
@@ -45,19 +46,20 @@ public:
 
     void Dibujar(list<Dibujo *> dibujos)
     {
-        clear();
-        nivel->ConstruirNivel();
+        
+        nivelSeleccionado->ConstruirNivel();
         for (auto &&dibujo : dibujos)
         {
             dibujo->Dibujar();
         }
-        box(stdscr, '|', '-');
         refresh();
     }
 };
 
 Ventana::Ventana(/* args */)
 {
+    getmaxyx(stdscr, this->maxy, this->maxx);
+    this->nivelSeleccionado = new Nivel();
     initscr();
     noecho();
     curs_set(0);

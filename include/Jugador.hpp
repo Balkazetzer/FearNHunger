@@ -22,6 +22,7 @@ public:
 
     void DesplazarIzquierda()
     {
+        
         this->x -= 1;
     }
     void DesplazarDerecha()

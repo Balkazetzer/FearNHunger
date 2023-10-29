@@ -16,7 +16,7 @@ using namespace std;
 class Nivel : public Dibujo
 {
 private:
-    int nivel;
+protected:
     Mapa* mapa = new Mapa("m1.txt"); 
 public:
     Nivel(){}
