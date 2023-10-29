@@ -9,12 +9,14 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <Nivel.hpp>
 using namespace std;
 
 class Ventana
 {
 private:
 
+Nivel* nivel;
 public:
     Ventana(/* args */);
     ~Ventana();
@@ -44,6 +46,7 @@ public:
     void Dibujar(list<Dibujo *> dibujos)
     {
         clear();
+        nivel->ConstruirNivel();
         for (auto &&dibujo : dibujos)
         {
             dibujo->Dibujar();

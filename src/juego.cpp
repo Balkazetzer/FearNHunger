@@ -8,13 +8,14 @@
 #include <Actualizable.hpp>
 #include <PantallaInicio.hpp>
 #include <stdio.h>
+#include <Nivel.hpp>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
     initscr();
-    noecho(); // Desactiva el eco de los caracteres de entrada
+    noecho(); 
     int rows, cols;
     bool sizescr;
     getmaxyx(stdscr, rows, cols);
@@ -39,6 +40,7 @@ int main(int argc, char const *argv[])
         list<Dibujo *> pantallas;
         pantallas.push_back(inicio);
         char key, st;
+        Nivel* nivel = new Nivel();
 
         do
         {
@@ -52,6 +54,10 @@ int main(int argc, char const *argv[])
 
             if (st == 's' || st == 'S') // CORRER JUEGO
             {
+                clear();
+                refresh();
+                nivel->ConstruirNivel();
+                refresh();
                 while (true)
                 {
                     cin.ignore();
@@ -85,10 +91,10 @@ int main(int argc, char const *argv[])
                         break;
                     }
 
-                    ventana.Actualizar(actualizables);
-                    ventana.Dibujar(dibujos);
                     refresh();
+                    ventana.Actualizar(actualizables);
                 }
+                    ventana.Dibujar(dibujos);
             }
             else // CERRAR JUEGO
             {

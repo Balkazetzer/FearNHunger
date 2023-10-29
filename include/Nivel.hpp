@@ -17,35 +17,13 @@ class Nivel : public Dibujo
 {
 private:
     int nivel;
-    Mapa* mapa;
+    Mapa* mapa = new Mapa("m1.txt"); 
 public:
     Nivel(){}
 
-    void CargarMapa(Mapa* mapa, int niv, int secc){
-        string ruta;
-
-        switch(niv){
-
-            case 1:
-
-            ruta = mapa->ruta;
-            
-            switch (secc)
-            {
-            case   1:
-
-                break;
-            
-            default:
-
-                break;
-            }
-            break;
-
-            default:
-            break;
-
-        }
+    void ConstruirNivel(){
+        string ruta = "./docs/mapas/";
+        mapa->DibujarMapa(ruta);
     }
     ~Nivel();
 };

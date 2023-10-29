@@ -1,7 +1,7 @@
 class Personaje
 {
 private:
-  /* data */
+  int estadisticas;
 public:
   Personaje(/* args */);
   ~Personaje();
