@@ -5,12 +5,12 @@
 class Jugador : public Dibujo, public Actualizable
 {
 private:
-    /* data */
+    Mapa& mapa;
 public:
-    Jugador() : Dibujo("sprites/charsprites/charf1"){
+     Jugador(Mapa& mapa) : Dibujo("sprites/charsprites/charf1"), mapa(mapa){
 
-    }
-    Jugador(int x, int y) : Dibujo(x, y, "sprites/charsprites/charf1")
+ }
+    Jugador(int x, int y, Mapa& mapa) : Dibujo(x, y, "sprites/charsprites/charf1"), mapa(mapa)
     {
         
     }
@@ -20,20 +20,36 @@ public:
         // this->y += 1;
     }
 
-    void DesplazarIzquierda()
+      void DesplazarIzquierda()
     {
-        
-        this->x -= 1;
+        if(mapa.EspacioVacio(this->x - 1, this->y))
+        {
+            this->x -= 1;
+        }
     }
+
     void DesplazarDerecha()
     {
-        this->x += 1;
+        if(mapa.EspacioVacio(this->x + 1, this->y))
+        {
+            this->x += 1;
+        }
     }
-    void DesplazarAbajo(){
-        this->y += 1;
+
+    void DesplazarAbajo()
+    {
+        if(mapa.EspacioVacio(this->x, this->y + 1))
+        {
+            this->y += 1;
+        }
     }
-    void DesplazarArriba(){
-        this->y -= 1;
+
+    void DesplazarArriba()
+    {
+        if(mapa.EspacioVacio(this->x, this->y - 1))
+        {
+            this->y -= 1;
+        }
     }
 
     ~Jugador();

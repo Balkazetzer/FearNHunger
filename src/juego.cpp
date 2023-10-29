@@ -21,16 +21,15 @@ int main(int argc, char const *argv[])
     getmaxyx(stdscr, rows, cols);
     string dimensiones = "dimensiones de la pantalla " + to_string(rows) + "x, " + to_string(cols) + "y";
     fstream pinicio;
-
     Ventana ventana;
     sizescr = ventana.Comprobar(rows, cols);
     // COMPRUEBA TAMAÑO SUFICIENTE
     if (sizescr == true)
     {
-
-        Jugador *chara = new Jugador(58, 25);
-        PantallaInicio *inicio = new PantallaInicio(rows, cols);
         Mapa* mapa = new Mapa("m1.txt");
+        mapa->DibujarMapa("./docs/mapas/");  // Dibuja el mapa al inicio
+        Jugador *chara = new Jugador(3, 3, *mapa);
+        PantallaInicio *inicio = new PantallaInicio(rows, cols);
 
         list<Dibujo *> dibujos;
         dibujos.push_back(chara);
@@ -61,8 +60,6 @@ int main(int argc, char const *argv[])
                     refresh();
                     ventana.Dibujar(dibujos);
                     key = getch();
-
-                    // INICIALIZAR MAPA
 
                     // COMANDOS DE MOVIMIENTO
                     switch (key)
