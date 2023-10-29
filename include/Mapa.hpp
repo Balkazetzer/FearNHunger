@@ -44,7 +44,7 @@ public:
 
     bool EspacioVacio(int x, int y)
     {
-        if(y < 0 || y >= mundo.size() || x < 0 || x >= mundo[0].size() ||)
+        if(y < 0 || y >= mundo.size() || x < 0 || x >= mundo[0].size())
         {
             return false;
         }
