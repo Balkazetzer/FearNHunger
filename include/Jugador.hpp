@@ -5,14 +5,14 @@
 class Jugador : public Dibujo, public Actualizable
 {
 private:
-    Mapa& mapa;
-public:
-     Jugador(Mapa& mapa) : Dibujo("sprites/charsprites/charf1"), mapa(mapa){
+    Mapa &mapa;
 
- }
-    Jugador(int x, int y, Mapa& mapa) : Dibujo(x, y, "sprites/charsprites/charf1"), mapa(mapa)
+public:
+    Jugador(Mapa &mapa) : Dibujo("sprites/charsprites/charf1"), mapa(mapa)
     {
-        
+    }
+    Jugador(int x, int y, Mapa &mapa) : Dibujo(x, y, "sprites/charsprites/charf1"), mapa(mapa)
+    {
     }
     void Actualizar()
     {
@@ -20,9 +20,9 @@ public:
         // this->y += 1;
     }
 
-      void DesplazarIzquierda()
+    void DesplazarIzquierda()
     {
-        if(mapa.EspacioVacio(this->x - 1, this->y))
+        if (mapa.EspacioVacio(this->x - 1, this->y))
         {
             this->x -= 1;
         }
@@ -30,7 +30,7 @@ public:
 
     void DesplazarDerecha()
     {
-        if(mapa.EspacioVacio(this->x + 1, this->y))
+        if (mapa.EspacioVacio(this->x + 1, this->y))
         {
             this->x += 1;
         }
@@ -38,7 +38,7 @@ public:
 
     void DesplazarAbajo()
     {
-        if(mapa.EspacioVacio(this->x, this->y + 1))
+        if (mapa.EspacioVacio(this->x, this->y + 1))
         {
             this->y += 1;
         }
@@ -46,7 +46,7 @@ public:
 
     void DesplazarArriba()
     {
-        if(mapa.EspacioVacio(this->x, this->y - 1))
+        if (mapa.EspacioVacio(this->x, this->y - 1))
         {
             this->y -= 1;
         }

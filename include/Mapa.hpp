@@ -11,7 +11,7 @@ class Mapa : public Dibujo
 {
 private:
     string stage;
-    vector<vector<char>> mundo; 
+    vector<vector<char>> mundo;
 
 public:
     Mapa(string stage)
@@ -22,7 +22,7 @@ public:
     void DibujarMapa(string ruta)
     {
         string map = this->stage;
-        string archivo = ruta + map; 
+        string archivo = ruta + map;
 
         ifstream file(archivo);
         if (!file.is_open())
@@ -44,7 +44,7 @@ public:
 
     bool EspacioVacio(int x, int y)
     {
-        if(y < 0 || y >= mundo.size() || x < 0 || x >= mundo[0].size())
+        if (y < 0 || y >= mundo.size() || x < 0 || x >= mundo[0].size())
         {
             return false;
         }

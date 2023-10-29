@@ -20,14 +20,13 @@ int main(int argc, char const *argv[])
     bool sizescr;
     getmaxyx(stdscr, rows, cols);
     string dimensiones = "dimensiones de la pantalla " + to_string(rows) + "x, " + to_string(cols) + "y";
-    fstream pinicio;
     Ventana ventana;
     sizescr = ventana.Comprobar(rows, cols);
     // COMPRUEBA TAMAÑO SUFICIENTE
     if (sizescr == true)
     {
-        Mapa* mapa = new Mapa("m1.txt");
-        mapa->DibujarMapa("./docs/mapas/");  // Dibuja el mapa al inicio
+        Mapa *mapa = new Mapa("m1.txt");
+        mapa->DibujarMapa("./docs/mapas/"); // Dibuja el mapa al inicio
         Jugador *chara = new Jugador(3, 3, *mapa);
         PantallaInicio *inicio = new PantallaInicio(rows, cols);
 

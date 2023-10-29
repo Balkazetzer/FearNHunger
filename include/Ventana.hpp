@@ -16,8 +16,9 @@ class Ventana
 {
 private:
 protected:
-Nivel* nivelSeleccionado;
-int maxx, maxy;
+    Nivel *nivelSeleccionado;
+    int maxx, maxy;
+
 public:
     Ventana(/* args */);
     ~Ventana();
@@ -46,7 +47,7 @@ public:
 
     void Dibujar(list<Dibujo *> dibujos)
     {
-        
+
         nivelSeleccionado->ConstruirNivel();
         for (auto &&dibujo : dibujos)
         {
